@@ -1,6 +1,6 @@
 package cn.hwj.fallback;
 
-import cn.hwj.constant.Constants;
+// import cn.hwj.constant.Constants;
 import cn.hwj.interfaces.MeegoFeign;
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.stereotype.Component;
@@ -16,6 +16,7 @@ import org.springframework.stereotype.Component;
 public class MeegoFeignFallback implements MeegoFeign {
     @Override
     public String meegoN9Like(JSONObject rParams) {
-        return Constants.FALL_BACK_ERROR;
+        // return Constants.FALL_BACK_ERROR;
+        return "Error";
     }
 }
