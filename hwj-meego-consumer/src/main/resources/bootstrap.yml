@@ -1,0 +1,23 @@
+
+spring:
+  application:
+    name: hwj-meego-consumer
+  cloud:
+    config:
+#      username: letrain
+#      password: Hwj38121
+#      name: hwj-meego-consumer
+      discovery:
+        enabled: true
+        service-id: hwj-meego-config-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+    lease-renewal-interval-in-seconds: 15
+    lease-expiration-duration-in-seconds: 30
+#server:
+#  port: 9420
