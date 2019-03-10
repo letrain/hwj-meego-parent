@@ -1,0 +1,26 @@
+#server:
+#  port: 9600
+spring:
+  application:
+    name: hwj-meego-zuul-gateway
+  zipkin:
+    base-url: http://localhost:9300
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: hwj-meego-config-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 15
+    lease-expiration-duration-in-seconds: 30
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+zuul:
+  routes:
+    meego:
+      path: /lumia/**
+      serviceId: hwj-meego-consumer
