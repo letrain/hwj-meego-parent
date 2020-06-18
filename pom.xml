@@ -18,6 +18,7 @@
         <module>hwj-meego-provider</module>
         <module>hwj-meego-consumer</module>
         <module>hwj-meego-gateway</module>
+        <module>hwj-meego-config</module>
     </modules>
 
     <parent>
