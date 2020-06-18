@@ -25,7 +25,6 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.18.RELEASE</version>
-        <relativePath>/pom.xml</relativePath>
     </parent>
 
     <properties>
