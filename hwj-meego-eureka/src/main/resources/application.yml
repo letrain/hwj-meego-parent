@@ -6,8 +6,8 @@ eureka:
     lease-expiration-duration-in-seconds: 30
   client:
     # 是否注册到服务
-    register-with-eureka: false
+    register-with-eureka: true
     # 不注册
-    fetch-registry: false
+    fetch-registry: true
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://service-center-3.com:${server.port}/eureka/,http://service-center-2.com:${server.port}/eureka/
