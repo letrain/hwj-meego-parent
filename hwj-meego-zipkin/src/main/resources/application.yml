@@ -14,4 +14,4 @@ spring:
     name: hwj-meego-zipkin
   cloud:
     inetutils:
-      ignored-interfaces: enp0s3
+      ignored-interfaces: eth0
