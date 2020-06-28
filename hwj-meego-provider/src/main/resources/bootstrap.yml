@@ -17,6 +17,9 @@ spring:
       discovery:
         enabled: true
         service-id: hwj-meego-config-server
+    inetutils:
+      ## 忽略指定网卡，支持正则表达式
+      ignored-interfaces: ['VMware.*']
 #      username: letrain
 #      password: Hwj38121
 #  zipkin:
