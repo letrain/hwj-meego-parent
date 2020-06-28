@@ -12,3 +12,6 @@ eureka:
 spring:
   application:
     name: hwj-meego-zipkin
+  cloud:
+    inetutils:
+      ignored-interfaces: enp0s3
