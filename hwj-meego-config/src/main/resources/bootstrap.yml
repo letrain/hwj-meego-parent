@@ -24,3 +24,5 @@ spring:
           username: letrain
           password: Hwj38121
           search-paths: '{application}'
+#    inetutils:
+#      ignored-interfaces: ['VirtualBox.*']

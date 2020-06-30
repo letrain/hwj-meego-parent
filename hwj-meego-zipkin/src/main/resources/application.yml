@@ -16,4 +16,7 @@ spring:
     name: hwj-meego-zipkin
 #  cloud:
 #    inetutils:
-#      ignored-interfaces: eth0
+#      ignored-interfaces: ['VirtualBox.*']
+#      preferred-networks:
+#        - 192.168
+#        - 10.0
