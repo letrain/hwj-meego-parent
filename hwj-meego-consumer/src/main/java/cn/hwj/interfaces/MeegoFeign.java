@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
  * @mail
  * @date: 2018-12-08 14:45
  */
-@FeignClient(value = "hwj-meego-provider", fallback = MeegoFeignFallback.class)
+@FeignClient(value = "hwj-meego-provider-dev", fallback = MeegoFeignFallback.class)
 public interface MeegoFeign {
     @PostMapping("/meego/N9")
     String meegoN9Like(@RequestBody JSONObject rParams);

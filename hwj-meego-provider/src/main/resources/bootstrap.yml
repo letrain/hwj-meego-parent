@@ -1,5 +1,5 @@
-#server:
-#  port: 9410
+server:
+  port: 9410
 eureka:
   client:
     service-url:
