@@ -1,9 +1,11 @@
 package cn.hwj.controller;
 
+import cn.hwj.service.MongoDbService;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,6 +22,9 @@ public class MeegoController {
 
     private Logger logger = LoggerFactory.getLogger(MeegoController.class);
 
+    @Autowired
+    private MongoDbService mongoDbService;
+
     @PostMapping("/N9")
     public String meegoN9Like(@RequestBody JSONObject params){
         logger.info("请求参数：{}", JSONObject.toJSONString(params));
@@ -27,5 +32,12 @@ public class MeegoController {
         result.put("model", "Meego-N9");
         logger.info("返回结果：{}", JSONObject.toJSONString(result));
         return JSON.toJSONString(result);
+    }
+
+    @PostMapping("/mongo")
+    public String testMongoDb(@RequestBody JSONObject params){
+        logger.info("请求参数：{}", JSONObject.toJSONString(params));
+        mongoDbService.testMongoDb();
+        return "34242";
     }
 }

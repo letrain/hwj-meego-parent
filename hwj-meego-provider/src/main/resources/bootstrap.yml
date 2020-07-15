@@ -20,6 +20,11 @@ spring:
     inetutils:
       ## 忽略指定网卡，支持正则表达式
       ignored-interfaces: ['VMware.*']
+  data:
+    mongodb:
+      host: 192.168.56.102
+      port: 30000
+      database: wxy
 #      username: letrain
 #      password: Hwj38121
 #  zipkin:
